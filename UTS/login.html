@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Laundry Service</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center vh-100"
+    >
+      <!-- Title for Laundry Center -->
+      <h1 class="text-center mb-4">Laundry Center</h1>
+
+      <!-- Soft login prompt message above the box -->
+      <div class="text-center mb-4">
+        <h4>Please log in to continue and enjoy our services!</h4>
+      </div>
+
+      <div class="login-box">
+        <h2 class="text-center">Login</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" required />
+            <small class="text-danger" id="usernameError"></small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              required
+            />
+            <small class="text-danger" id="passwordError"></small>
+          </div>
+          <button type="button" class="btn btn-primary btn-block" id="loginBtn">
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginBtn")
+        .addEventListener("click", function () {
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          // Validation logic
+          let valid = true;
+          document.getElementById("usernameError").innerText = "";
+          document.getElementById("passwordError").innerText = "";
+
+          if (username.trim() === "") {
+            document.getElementById("usernameError").innerText =
+              "Username is required.";
+            valid = false;
+          }
+
+          if (password.length < 6) {
+            document.getElementById("passwordError").innerText =
+              "Password must be at least 6 characters.";
+            valid = false;
+          }
+
+          // If valid, store username and redirect
+          if (valid) {
+            sessionStorage.setItem("username", username);
+            window.location.href = "home.html"; // Redirect to home page
+          }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

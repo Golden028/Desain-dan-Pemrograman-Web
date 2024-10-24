@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+  background-color: #f8f9fa; /* Light background color for soft look */
+  color: #343a40; /* Dark grey text color */
+  padding: 20px; /* Padding for elements */
+  font-family: Arial, sans-serif; /* General font for the body */
+}
+
+/* Navbar Styles */
+.custom-navbar {
+  background-color: #004d00; /* Very dark green for navbar */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: #ffffff; /* White text for links */
+}
+
+.custom-navbar .nav-link:hover {
+  color: #c2b280; /* Lighter brown on hover */
+}
+
+/* Login Box Styles */
+.login-box {
+  background-color: #ffffff; /* White for login box */
+  border: 1px solid #d1d1d1; /* Light border */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  width: 400px; /* Fixed width for login box */
+}
+
+/* Home Box Styles */
+.home-box {
+  background-color: #ffffff; /* White for home box */
+  border: 1px solid #d1d1d1; /* Light border */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  width: 400px; /* Fixed width for home box */
+}
+
+/* Check Price Box Styles */
+.price-check-box {
+  background-color: #ffffff; /* White for check price box */
+  border: 1px solid #d1d1d1; /* Light border */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  width: 400px; /* Fixed width for check price box */
+}
+
+/* Logout Box Styles */
+.logout-box {
+  background-color: #ffffff; /* White for logout box */
+  border: 1px solid #d1d1d1; /* Light border */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  width: 400px; /* Fixed width for logout box */
+}
+
+/* Heading Styles */
+h1,
+h2 {
+  color: #2e7d32; /* Dark green color for titles */
+  margin-bottom: 20px; /* Space below headings */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #004d00; /* Very dark green for buttons */
+  border: none;
+  color: white; /* White text for buttons */
+}
+
+.btn-primary:hover {
+  background-color: #005700; /* Slightly lighter dark green on hover */
+}
+
+/* Form Control Styles */
+.form-control {
+  background-color: #f7f7f7; /* Light grey for form inputs */
+  border: 1px solid #ccc; /* Light border for inputs */
+}
+
+.form-control:focus {
+  background-color: #ffffff; /* White focus color */
+  color: #333; /* Dark text color */
+}
+
+/* Total Price Display Styles */
+#totalPrice {
+  background-color: #004d00; /* Very dark green for total price */
+  color: white; /* White text for total price */
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Error Message Styles */
+.text-danger {
+  color: #ff5252; /* Red color for error messages */
+}
+
+/* Miscellaneous Styles */
+small {
+  font-weight: bold; /* Bold for hints */
+}
+
+/* Carousel Styles */
+.carousel img {
+  max-height: 400px; /* Set max height for carousel images */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.carousel-item {
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  transition: transform 0.5s ease-in-out; /* Smooth transition for transform */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent controls */
+  border-radius: 50%; /* Circular controls */
+}
+
+/* Container Styles */
+.container {
+  margin-top: 40px; /* Increase top margin to move content lower */
+}
+
+/* Additional Styles */
+.carousel-image {
+  height: 400px; /* Adjust this value as needed for the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Price - Laundry Center</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <a class="navbar-brand" href="#">Laundry Center</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="check-price.html">Check Price</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100"
+    >
+      <div class="price-check-box">
+        <h2 class="text-center">Check Price</h2>
+        <form id="priceCheckForm">
+          <div class="form-group">
+            <label for="weight">Weight (kg):</label>
+            <input
+              type="number"
+              class="form-control"
+              id="weight"
+              placeholder="Enter weight in kg"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Service Type:</label>
+            <select class="form-control" id="serviceType" required>
+              <option value="washDry">Wash & Dry</option>
+              <option value="washIron">Wash & Iron</option>
+              <option value="ironing">Ironing Only</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Delivery Type:</label>
+            <select class="form-control" id="deliveryType" required>
+              <option value="regular">Regular</option>
+              <option value="express">Express (+200 per kg)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Membership:</label>
+            <select class="form-control" id="membership" required>
+              <option value="nonMember">Non-Member</option>
+              <option value="member">Member (-10% discount)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Check Price
+          </button>
+        </form>
+        <div id="totalPrice" class="mt-4"></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
