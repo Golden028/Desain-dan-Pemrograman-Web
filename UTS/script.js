@@ -1,27 +1,4 @@
 $(document).ready(function () {
-  // Login form submission
-  $("#loginForm").on("submit", function (e) {
-    e.preventDefault();
-    const username = $("#username").val();
-    const password = $("#password").val();
-    let errorMessage = "";
-
-    if (username === "" || password === "") {
-      errorMessage = "Must be filled.";
-    } else if (password.length < 6) {
-      errorMessage = "Password must be at least 6 characters.";
-    } else if (!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
-      errorMessage = "Password must be uppercase and lowercase.";
-    } else {
-      // Valid login
-      sessionStorage.setItem("username", username);
-      window.location.href = "home.html"; // Redirect to home page
-      return;
-    }
-
-    $("#errorMessage").text(errorMessage);
-  });
-
   // Price check form submission
   $("#priceCheckForm").on("submit", function (e) {
     e.preventDefault();
