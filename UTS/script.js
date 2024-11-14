@@ -2,7 +2,7 @@ $(document).ready(function () {
   // Price check form submission
   $("#priceCheckForm").on("submit", function (e) {
     e.preventDefault();
-    const weight = parseInt($("#weight").val());
+    let weight = parseInt($("#weight").val());
     const serviceType = $("#serviceType").val();
     const deliveryType = $("#deliveryType").val();
     const membership = $("#membership").val();
@@ -21,6 +21,12 @@ $(document).ready(function () {
       additionalFee = 200 * weight;
     }
 
+    if (membership ==+ "kupon") {
+      if (weight > 2) {
+        weight = weight - 2;
+      }
+    }
+
     let totalPrice = pricePerKilo * weight + additionalFee;
 
     if (membership === "member") {
@@ -29,10 +35,5 @@ $(document).ready(function () {
 
     // Display total price
     $("#totalPrice").text(`Total Price: Rp ${totalPrice.toLocaleString()}`);
-  });
-
-  // Add event listener for slide events
-  $("#laundryCarousel").on("slide.bs.carousel", function () {
-    // You can add more code here if you want to trigger something on slide
   });
 });

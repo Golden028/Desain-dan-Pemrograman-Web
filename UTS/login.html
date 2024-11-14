@@ -69,6 +69,10 @@
             document.getElementById("passwordError").innerText =
               "Password must be at least 6 characters.";
             valid = false;
+          } else if (!/[A-Z]/.test(password) || !/[a-z]/.test(password)) {
+            document.getElementById("passwordError").innerText =
+              "Password must be uppercase and lowercase.";
+            valid = false;
           }
 
           // If valid, store username and redirect
